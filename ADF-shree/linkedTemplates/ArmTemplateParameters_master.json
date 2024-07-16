@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADF-shree"
+		},
+		"LS_SQL_password": {
+			"value": ""
+		},
+		"LS_getM_connectionString": {
+			"value": ""
+		},
+		"LS_sink_connectionString": {
+			"value": ""
+		},
+		"LSget_connectionString": {
+			"value": ""
+		},
+		"linkedService1_password": {
+			"value": ""
+		},
+		"LS_SQL_properties_typeProperties_server": {
+			"value": "server-shree.database.windows.net"
+		},
+		"LS_SQL_properties_typeProperties_database": {
+			"value": "SQL_shree_database"
+		},
+		"LS_SQL_properties_typeProperties_userName": {
+			"value": "shree"
+		},
+		"linkedService1_properties_typeProperties_server": {
+			"value": "server-shree.database.windows.net"
+		},
+		"linkedService1_properties_typeProperties_database": {
+			"value": "SQL_shree_database"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"value": "shree"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
