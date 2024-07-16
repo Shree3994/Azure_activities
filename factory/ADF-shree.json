@@ -1,0 +1,9 @@
+{
+	"name": "ADF-shree",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "eb45bfb1-5f98-4288-a719-7bbc919ac1fe",
+		"tenantId": "7b91b87a-351e-4476-b56d-048bfdd81204"
+	}
+}
