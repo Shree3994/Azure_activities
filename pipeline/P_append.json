@@ -1,6 +1,56 @@
 {
 	"name": "P_append",
 	"properties": {
+		"activities": [
+			{
+				"name": "Append variable1",
+				"type": "AppendVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "a",
+					"value": "50"
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Append variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "output",
+					"value": {
+						"value": "@variables('a')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"a": {
+				"type": "Array",
+				"defaultValue": [
+					10,
+					20,
+					30,
+					40
+				]
+			},
+			"output": {
+				"type": "Array"
+			}
+		},
 		"annotations": []
 	}
 }
