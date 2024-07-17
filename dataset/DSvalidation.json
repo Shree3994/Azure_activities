@@ -1,0 +1,44 @@
+{
+	"name": "DSvalidation",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_validtion",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DEST_COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "ORIGIN_COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "count",
+				"type": "String"
+			}
+		]
+	}
+}
