@@ -1,9 +1,9 @@
 {
-	"name": "P_condition_split",
+	"name": "P_pivot",
 	"properties": {
 		"activities": [
 			{
-				"name": "DF_condition_split",
+				"name": "DFpivot",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "DF_condition_split",
+						"referenceName": "DFpivot",
 						"type": "DataFlowReference"
 					},
 					"compute": {
