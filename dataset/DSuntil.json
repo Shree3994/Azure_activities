@@ -1,0 +1,36 @@
+{
+	"name": "DSuntil",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_until",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "emp1.csv",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DEST_COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "ORIGIN_COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "count",
+				"type": "String"
+			}
+		]
+	}
+}
