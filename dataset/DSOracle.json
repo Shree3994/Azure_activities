@@ -1,0 +1,16 @@
+{
+	"name": "DSOracle",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLOracle1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "Az",
+			"table": "EMP_TEST"
+		}
+	}
+}
