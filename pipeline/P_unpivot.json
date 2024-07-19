@@ -1,9 +1,9 @@
 {
-	"name": "P_dataflow_exists",
+	"name": "P_unpivot",
 	"properties": {
 		"activities": [
 			{
-				"name": "DF_exists",
+				"name": "DF_unpivot",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "DF_exists",
+						"referenceName": "DF_unpivot",
 						"type": "DataFlowReference"
 					},
 					"compute": {
