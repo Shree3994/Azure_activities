@@ -1,0 +1,16 @@
+{
+	"name": "sql_scd",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQL_SCD1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employee_DF_SCD1"
+		}
+	}
+}
