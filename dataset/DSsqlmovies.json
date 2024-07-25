@@ -1,0 +1,16 @@
+{
+	"name": "DSsqlmovies",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Sql_movies",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "movies"
+		}
+	}
+}

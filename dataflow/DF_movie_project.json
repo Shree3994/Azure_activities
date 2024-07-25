@@ -1,0 +1,59 @@
+{
+	"name": "DF_movie_project",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DSmovieproject",
+						"type": "DatasetReference"
+					},
+					"name": "Moviesource"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DSsqlmovies",
+						"type": "DatasetReference"
+					},
+					"name": "moviesink"
+				}
+			],
+			"transformations": [
+				{
+					"name": "filter1"
+				},
+				{
+					"name": "Avgrating"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          movie as integer,",
+				"          title as string,",
+				"          genres as string,",
+				"          year as integer,",
+				"          rating as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> Moviesource",
+				"Moviesource filter(year >= 1910 && year <= 2000 && rlike(genres, \"Comedy\")) ~> filter1",
+				"filter1 aggregate(groupBy(year),",
+				"     Avgrating = avg(rating)) ~> Avgrating",
+				"Avgrating sink(allowSchemaDrift: true,",
+				"     validateSchema: true,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> moviesink"
+			]
+		}
+	}
+}
